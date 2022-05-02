@@ -16,7 +16,7 @@ body {
 
 .logo {
     height: 40px;
-    padding-right: 50px;
+    padding-right: 5px;  /* adds gap between logo and title */
 }
 
 /* --------- Game layout */
@@ -30,13 +30,13 @@ body {
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1%;
+    padding: 1%; /* gives room inside the div so buttons dont touch the sides */
 }
 
 .question-area {
     width: 50%;
     font-size: 2rem;
-    margin: auto;
+    margin: auto; /* centres the text*/
     padding: 50px 0;
 }
 
@@ -109,6 +109,14 @@ body {
     font-size: 3.2rem;
     margin: 0 30px;
     transition: all 0.5s;
+}
+
+.btn--big::after{ /*puts it after the element*/
+    content: attr(data-type); /* read attribute data-type*/
+    font-size: 1rem;
+    color: #445361;
+    position: relative;
+    left: -0.5em;
 }
 
 .btn--blue {

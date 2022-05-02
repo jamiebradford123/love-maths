@@ -23,17 +23,23 @@
     <div class="game-area">
         <!-- Controlls area div- buttons at the top of the div will go here which allow user to select which game they want to play-->
         <div class="controls-area">
-            <!-- one button for each game, button, button big, button color-->
-            <button class="btn btn--big btn--green">
+            <!-- add-->
+            <button data-type="addition" class="btn btn--big btn--green">
                 <i class="fas fa-plus"></i>
             </button>
-            <button class="btn btn--big btn--blue">
+
+            <!-- subtract-->
+            <button data-type="subtract" class="btn btn--big btn--blue">
                 <i class="fas fa-minus"></i>
             </button>
-            <button class="btn btn--big btn--orange">
+
+            <!-- multiply-->
+            <button data-type="multiply" class="btn btn--big btn--orange">
                 <i class="fas fa-times"></i>
             </button>
-            <button class="btn btn--big btn--red">
+
+            <!-- divide-->
+            <button data-type="division" class="btn btn--big btn--red">
                 <i class="fas fa-divide"></i>
             </button>
         </div>
@@ -50,7 +56,7 @@
         </div>
 
         <!-- button to submit answers-->
-        <button class="btn btn--gray">Submit Answer</button>
+        <button data-type="submit" class="btn btn--gray">Submit Answer</button>
     </div>
 
     <!-- Score Area-->

@@ -16,11 +16,42 @@
 <body>
     <!-- Heading-->
     <h1 class="heading">
-        <img class="logo" src="assets/images/logo.png" alt="logo"> Love Maths
+        <img class="logo" src="assets/images/logo.png" alt="logo"> Love Maths 
     </h1>
 
     <!-- Game area -->
-    <div class="game-area"></div>
+    <div class="game-area">
+        <!-- Controlls area div- buttons at the top of the div will go here which allow user to select which game they want to play-->
+        <div class="controls-area">
+            <!-- one button for each game, button, button big, button color-->
+            <button class="btn btn--big btn--green">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="btn btn--big btn--blue">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="btn btn--big btn--orange">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="btn btn--big btn--red">
+                <i class="fas fa-divide"></i>
+            </button>
+        </div>
+
+        <!-- Question area below the buttons-->
+        <div class="question-area">
+            <!-- 4 spans for each part of the question, one for the first number, one for the operation, one of the second number and then one for the equals-->
+            <span id="operand1">0</span>
+            <span id="operator">x</span>
+            <span id="operand2">0</span>
+            <span>=</span>
+            <p class="answer-message">Enter answer</p> <!-- this will only be visable on mobile-->
+            <input id="answer-box" type="number"> <!-- answer box which only allows numbers-->
+        </div>
+
+        <!-- button to submit answers-->
+        <button class="btn btn--gray">Submit Answer</button>
+    </div>
 
     <!-- Score Area-->
     <div class="score-area">

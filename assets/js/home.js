@@ -1,3 +1,5 @@
+// Expands the game type buttons
+
 var coll = document.getElementsByClassName("game-type");
 var i;
 
@@ -13,8 +15,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-
-
+// Modal 
 
 // Get the button that opens the modal
 var btn = document.querySelectorAll("button.modal-button");

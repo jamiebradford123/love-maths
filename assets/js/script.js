@@ -46,7 +46,10 @@ function runGame(gameType) {
         displaySubtractQuestion(num1, num2);
     } else if (gameType === "division" ) {
         displayDivisionQuestion(num1, num2);
-    } else {
+    } else if (gameType === "additionblitz" ) {
+        displayAdditionQuestion(num1, num2);
+    }
+      else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
@@ -98,6 +101,20 @@ function calculateCorrectAnswer() {
         throw `Unimplemented operator ${operator}. Aborting!`;
     }
 
+}
+
+function quizTimer() {  
+    let sec = 15;
+    var time = setInterval(myTimer, 1000);
+
+    function myTimer() {
+        document.getElementById('timer').innerHTML = sec + "sec left";
+        sec--;
+        if (sec == -1) {
+            clearInterval(time);
+            alert("Time out!! :(");
+        }
+    }
 }
 
 /**

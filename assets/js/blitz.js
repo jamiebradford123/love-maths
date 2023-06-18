@@ -10,8 +10,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 checkAnswer();
             } else {
                 let gameType = this.getAttribute("data-type");
+                var div = document.getElementById("question-area-blitz");
+                div.style.display = div.style.display == "none" ? "block" : "block";
                 runGame(gameType);
-                displayQuestionArea()
             }
         });
     }
@@ -104,20 +105,6 @@ function calculateCorrectAnswer() {
 
 }
 
-function quizTimer() {  
-    let sec = 15;
-    var time = setInterval(myTimer, 1000);
-
-    function myTimer() {
-        document.getElementById('timer').innerHTML = sec + "sec left";
-        sec--;
-        if (sec == -1) {
-            clearInterval(time);
-            alert("Time out!! :(");
-        }
-    }
-}
-
 /**
  * Gets the current score from the DOM and increments it by 1
  */
@@ -140,7 +127,7 @@ function incrementWrongAnswer() {
 
 function displayQuestionArea(id) {
     var div = document.getElementById("question-area-blitz");
-    div.style.display = div.style.display == "none" ? "block" : "none";
+    div.style.display = div.style.display == "none" ? "block" : "block";
 }
 
 function displayAdditionQuestion(operand1, operand2) {
@@ -148,7 +135,7 @@ function displayAdditionQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
-    
+
 }
 
 function displaySubtractQuestion(operand1, operand2) {
